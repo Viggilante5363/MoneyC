@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expense Calculator</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Expense Calculator</h1>
+            <p>Calculate your daily and monthly expenses.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <form id="expenseForm">
+            <div class="form-group">
+                <label for="dailyExpense">Daily Expense ($):</label>
+                <input type="number" id="dailyExpense" step="0.01" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="monthlyExpense">Monthly Expense ($):</label>
+                <input type="number" id="monthlyExpense" step="0.01" min="0" readonly>
+            </div>
+            <button type="button" onclick="calculateExpenses()">Calculate Monthly Expense</button>
+        </form>
+        <div id="results"></div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
